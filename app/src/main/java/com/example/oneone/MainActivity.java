@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int counter=0;
+    int b=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +34,25 @@ public class MainActivity extends AppCompatActivity {
                 t1.setText(String.format("%d", counter));
                 if (counter%2==0) {
 
+                    if (b==0)
+                    {
                     b1.setText("Sumiya");
+                    b1.setTextSize(4);}
                 } else {
+                    if (b==0)
+                    {
+                    b1.setTextSize(40);
 
-                    b1.setText("Jahid");
+                    b1.setText("Jahid");}
+                }
+
+                if (counter==3) {
+                    counter=0;
+
+                    b1.setText("Blocked for 5 mins");
+                    b=1;
+
+
                 }
 
 
